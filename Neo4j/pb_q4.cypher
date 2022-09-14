@@ -1,0 +1,1 @@
+match (u:User)-[c:commented]->(p:Product) with avg(c.score) as avg_score, p.id as product_id, p.product_title_fa as product_title where product_title =~ '.*کفش.*' and avg_score > 3 return product_id, product_title, avg_score;

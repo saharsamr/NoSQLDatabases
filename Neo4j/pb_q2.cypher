@@ -1,0 +1,1 @@
+match (r:Receipt)-[l:location]->(c:City) where [item in split(r.date, '-')][1] = '02' return distinct c.name;

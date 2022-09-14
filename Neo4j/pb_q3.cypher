@@ -1,0 +1,1 @@
+match (b:Brand)-[l:have]->(p:Product)<-[c:commented]-(u:User) return avg(c.score), b.name;

@@ -1,0 +1,1 @@
+match (u:User)-[c:commented]->(p:Product)<-[h:have]-(b:Brand) where b.name = 'Nike' and c.score < 3 delete c;
